@@ -1,1 +1,29 @@
+@charset "UTF-8";
+/**Practice Styles
+ * ------ Header
+ */
 
+header {
+	background-color: #FFFFFF;
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+	background-position: 20px 50%;
+	height: 70px;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+header div {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    background-color: #cccccc;
+}
+
+.available {
+    background-color: #ff545f;
+}
