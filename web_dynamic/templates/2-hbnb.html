@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="../static/styles/6-filters.css?{{ cache_id }}">
     <link rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
     <link rel="stylesheet" href="../static/styles/font-awesome.css?{{ cache_id }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../static/scripts/2-hbnb.js?{{ cache_id }}"></script>
   </head>
 
   <!-- **********************
@@ -35,6 +37,7 @@
 	 ********************** -->
 
     <header>
+      <div id="api_status"></div>
     </header>
     <main>
       <div class="container">
@@ -73,7 +76,7 @@
 	    <h4>&nbsp;</h4>
 	    <ul class="popover">
 	      {% for amenity in amens|sort(attribute='name') %}
-	      <LI>{{ amenity.name }}</LI>
+	      <LI><INPUT type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">{{ amenity.name }}</LI>
 	      {% endfor %}
 	    </ul>
 	  </div>

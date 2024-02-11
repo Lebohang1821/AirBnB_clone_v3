@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="../static/styles/6-filters.css?{{ cache_id }}">
     <link rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
     <link rel="stylesheet" href="../static/styles/font-awesome.css?{{ cache_id }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../static/scripts/3-hbnb.js?{{ cache_id }}"></script>
   </head>
 
   <!-- **********************
@@ -35,6 +37,7 @@
 	 ********************** -->
 
     <header>
+      <div id="api_status"></div>
     </header>
     <main>
       <div class="container">
@@ -73,7 +76,7 @@
 	    <h4>&nbsp;</h4>
 	    <ul class="popover">
 	      {% for amenity in amens|sort(attribute='name') %}
-	      <LI>{{ amenity.name }}</LI>
+	      <LI><INPUT type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">{{ amenity.name }}</LI>
 	      {% endfor %}
 	    </ul>
 	  </div>
@@ -91,65 +94,6 @@
 	<!-- **********************
 	     BEGIN 1 PLACE
 	     ********************** -->
-
-	  {% for place in places|sort(attribute='name') %}
-
-	  <article>
-
-	    <div class="title">
-
-	      <h2>{{ place.name }}</h2>
-
-	      <div class="price_by_night">
-
-		{{ place.price_by_night }}
-
-	      </div>
-	    </div>
-	    <div class="information">
-	      <div class="max_guest">
-		<i class="fa fa-users fa-3x" aria-hidden="true"></i>
-
-		<br />
-
-		{{ place.max_guest }} Guests
-
-	      </div>
-	      <div class="number_rooms">
-		<i class="fa fa-bed fa-3x" aria-hidden="true"></i>
-
-		<br />
-
-		{{ place.number_rooms }} Bedrooms
-	      </div>
-	      <div class="number_bathrooms">
-		<i class="fa fa-bath fa-3x" aria-hidden="true"></i>
-
-		<br />
-
-		{{ place.number_bathrooms }} Bathroom
-
-	      </div>
-	    </div>
-
-	    <!-- **********************
-		 USER
-		 **********************  -->
-
-	    <div class="user">
-
-	      <strong>Owner: {{ users[place.user_id] }}</strong>
-
-	    </div>
-	    <div class="description">
-
-	      {{ place.description }}
-
-	    </div>
-
-	  </article> <!-- End 1 PLACE Article -->
-
-	  {% endfor %}
 
 	</section>
       </div>
