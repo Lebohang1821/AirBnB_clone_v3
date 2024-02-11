@@ -2,18 +2,18 @@
 <html lang="en">
   <head>
 
-    <!-- HEAD -->
+    <!-- HEADER -->
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Holberton AirBnB</title>
 
-    <!-- FAVICON -->
+    <!-- FAVICONS -->
 
     <link rel="shortcut icon" href="../static/images/icon.png?{{ cache_id }}">
 
     <!-- **********************
-	 CSS styles
+	 CSS style
 	 ********************** -->
 
     <link rel="stylesheet" href="../static/styles/4-common.css?{{ cache_id }}">
@@ -25,13 +25,13 @@
   </head>
 
   <!-- **********************
-       BODY
+       Body
        ********************** -->
 
   <body>
 
     <!-- **********************
-	 HEADER
+	 HEAD
 	 ********************** -->
 
     <header>
@@ -40,13 +40,13 @@
       <div class="container">
 
 	<!-- **********************
-	     FILTERS
+	     FILTER
 	     ********************** -->
 
 	<section class="filters">
 
 	  <!-- **********************
-	       LOCATIONS
+	       LOCATION
 	       ********************** -->
 
 	  <div class="locations">
@@ -65,7 +65,7 @@
 	  </div>
 
 	  <!-- **********************
-	       AMENITIES
+	       AMENITY
 	       ********************** -->
 
 	  <div class="amenities">
@@ -79,7 +79,7 @@
 	  </div>
 
 	  <!-- **********************
-	       SEARCH BUTTON
+	       SEARCH BUTTONs
 	       ********************** -->
 
 	  <button>Search</button>
@@ -89,7 +89,7 @@
 	  <h1>Places</h1>
 
 	<!-- **********************
-	     BEGIN 1 PLACE
+	     BEGIN 1 PLACEs
 	     ********************** -->
 
 	  {% for place in places|sort(attribute='name') %}
@@ -133,7 +133,7 @@
 	    </div>
 
 	    <!-- **********************
-		 USER
+		 USEREs
 		 **********************  -->
 
 	    <div class="user">
@@ -147,7 +147,7 @@
 
 	    </div>
 
-	  </article> <!-- End 1 PLACE Article -->
+	  </article> <!-- End 1 PLACE Articles -->
 
 	  {% endfor %}
 
@@ -155,7 +155,7 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTEr -->
 
     <footer>
       Holberton School
